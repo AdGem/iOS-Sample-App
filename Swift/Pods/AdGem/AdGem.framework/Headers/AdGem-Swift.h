@@ -249,6 +249,8 @@ typedef SWIFT_ENUM(NSInteger, AdGemGender, closed) {
 
 
 
+
+
 @class PublicKey;
 @class EncryptedMessage;
 @class PrivateKey;

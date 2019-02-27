@@ -1,5 +1,5 @@
 PODS:
-  - AdGem (1.3.2)
+  - AdGem (1.3.4)
 
 DEPENDENCIES:
   - AdGem
@@ -9,8 +9,8 @@ SPEC REPOS:
     - AdGem
 
 SPEC CHECKSUMS:
-  AdGem: 66d7dccbf3de9cdfa4654616e69bba681bd2c634
+  AdGem: 37debcd3c22c6ab8a8c188a7cd5a7223ed5bffd2
 
 PODFILE CHECKSUM: dc318bf178ea5e8bb25d40680cc6b625cc8882dc
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
