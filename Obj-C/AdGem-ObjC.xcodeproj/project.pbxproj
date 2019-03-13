@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9CA72C8B36ED20A70479D2D /* libPods-AdGem-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */; };
+		FAF184E1221DC27000EC09B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E0221DC27000EC09B7 /* AppDelegate.m */; };
+		FAF184E4221DC27000EC09B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E3221DC27000EC09B7 /* ViewController.m */; };
+		FAF184E7221DC27000EC09B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF184E5221DC27000EC09B7 /* Main.storyboard */; };
+		FAF184E9221DC27100EC09B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF184E8221DC27100EC09B7 /* Assets.xcassets */; };
+		FAF184EC221DC27100EC09B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF184EA221DC27100EC09B7 /* LaunchScreen.storyboard */; };
+		FAF184EF221DC27100EC09B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184EE221DC27100EC09B7 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdGem-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.release.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		FAF184DC221DC27000EC09B7 /* AdGem-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdGem-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF184DF221DC27000EC09B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAF184E0221DC27000EC09B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAF184E2221DC27000EC09B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAF184E3221DC27000EC09B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAF184E6221DC27000EC09B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAF184E8221DC27100EC09B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF184EB221DC27100EC09B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAF184ED221DC27100EC09B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF184EE221DC27100EC09B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF184D9221DC27000EC09B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9CA72C8B36ED20A70479D2D /* libPods-AdGem-ObjC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		214267B7047D84690334F776 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */,
+				EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFA289C9F56C878A50643F0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAF184D3221DC27000EC09B7 = {
+			isa = PBXGroup;
+			children = (
+				FAF184DE221DC27000EC09B7 /* AdGem-ObjC */,
+				FAF184DD221DC27000EC09B7 /* Products */,
+				214267B7047D84690334F776 /* Pods */,
+				AFA289C9F56C878A50643F0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAF184DD221DC27000EC09B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF184DC221DC27000EC09B7 /* AdGem-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF184DE221DC27000EC09B7 /* AdGem-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				FAF184DF221DC27000EC09B7 /* AppDelegate.h */,
+				FAF184E0221DC27000EC09B7 /* AppDelegate.m */,
+				FAF184E2221DC27000EC09B7 /* ViewController.h */,
+				FAF184E3221DC27000EC09B7 /* ViewController.m */,
+				FAF184E5221DC27000EC09B7 /* Main.storyboard */,
+				FAF184E8221DC27100EC09B7 /* Assets.xcassets */,
+				FAF184EA221DC27100EC09B7 /* LaunchScreen.storyboard */,
+				FAF184ED221DC27100EC09B7 /* Info.plist */,
+				FAF184EE221DC27100EC09B7 /* main.m */,
+			);
+			path = "AdGem-ObjC";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAF184DB221DC27000EC09B7 /* AdGem-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF184F2221DC27100EC09B7 /* Build configuration list for PBXNativeTarget "AdGem-ObjC" */;
+			buildPhases = (
+				E02F2F95FF552B6119637863 /* [CP] Check Pods Manifest.lock */,
+				FAF184D8221DC27000EC09B7 /* Sources */,
+				FAF184D9221DC27000EC09B7 /* Frameworks */,
+				FAF184DA221DC27000EC09B7 /* Resources */,
+				2F16C4C70CD9310C370F8AF0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdGem-ObjC";
+			productName = "AdGem-ObjC";
+			productReference = FAF184DC221DC27000EC09B7 /* AdGem-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAF184D4221DC27000EC09B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "AdGem LLC";
+				TargetAttributes = {
+					FAF184DB221DC27000EC09B7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FAF184D7221DC27000EC09B7 /* Build configuration list for PBXProject "AdGem-ObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAF184D3221DC27000EC09B7;
+			productRefGroup = FAF184DD221DC27000EC09B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAF184DB221DC27000EC09B7 /* AdGem-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF184DA221DC27000EC09B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF184EC221DC27100EC09B7 /* LaunchScreen.storyboard in Resources */,
+				FAF184E9221DC27100EC09B7 /* Assets.xcassets in Resources */,
+				FAF184E7221DC27000EC09B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F16C4C70CD9310C370F8AF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh",
+				"${PODS_ROOT}/AdGem/AdGem.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdGem.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E02F2F95FF552B6119637863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdGem-ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAF184D8221DC27000EC09B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF184E4221DC27000EC09B7 /* ViewController.m in Sources */,
+				FAF184EF221DC27100EC09B7 /* main.m in Sources */,
+				FAF184E1221DC27000EC09B7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAF184E5221DC27000EC09B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF184E6221DC27000EC09B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF184EA221DC27100EC09B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF184EB221DC27100EC09B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAF184F0221DC27100EC09B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAF184F1221DC27100EC09B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF184F3221DC27100EC09B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
+				INFOPLIST_FILE = "AdGem-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adgem.AdGem-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAF184F4221DC27100EC09B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
+				INFOPLIST_FILE = "AdGem-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adgem.AdGem-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAF184D7221DC27000EC09B7 /* Build configuration list for PBXProject "AdGem-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF184F0221DC27100EC09B7 /* Debug */,
+				FAF184F1221DC27100EC09B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF184F2221DC27100EC09B7 /* Build configuration list for PBXNativeTarget "AdGem-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF184F3221DC27100EC09B7 /* Debug */,
+				FAF184F4221DC27100EC09B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAF184D4221DC27000EC09B7 /* Project object */;
+}

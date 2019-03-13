@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zro-hY-8UB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1K9-UF-3Po"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-Wp-Kdc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKo-wo-8T6">
+                                <rect key="frame" x="50" y="620" width="314" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kG6-l4-V8v"/>
+                                </constraints>
+                                <state key="normal" title="Show Offerwall">
+                                    <color key="titleColor" red="0.45098039220000002" green="0.34901960780000002" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOfferwallTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXq-Er-ewK"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OK-sk-KWJ">
+                                <rect key="frame" x="50" y="694" width="314" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e1y-c6-cLK"/>
+                                </constraints>
+                                <state key="normal" title="Show Standard Video">
+                                    <color key="titleColor" red="0.45098039220000002" green="0.34901960780000002" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showStandardVideoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eD-a0-MOT"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-E2-Azr">
+                                <rect key="frame" x="50" y="768" width="314" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="B26-t0-nfu"/>
+                                </constraints>
+                                <state key="normal" title="Show Rewarded Video">
+                                    <color key="titleColor" red="0.45098039220000002" green="0.34901960780000002" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showRewardedVideoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wo1-Nx-f9F"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="wi1-Pd-1tN">
+                                <rect key="frame" x="50" y="74" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wi1-Pd-1tN" secondAttribute="height" multiplier="1:1" id="Tkd-kY-aA2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS - VX.X" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH4-zR-l0e">
+                                <rect key="frame" x="312.5" y="841" width="81.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ie-3h-fWr">
+                                <rect key="frame" x="331" y="44" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qKo-wo-8T6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="7JU-L6-rvT"/>
+                            <constraint firstItem="wi1-Pd-1tN" firstAttribute="top" secondItem="zro-hY-8UB" secondAttribute="bottom" constant="30" id="8Jw-Q5-OAf"/>
+                            <constraint firstItem="6OK-sk-KWJ" firstAttribute="top" secondItem="qKo-wo-8T6" secondAttribute="bottom" constant="30" id="AOE-Qf-QDc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qKo-wo-8T6" secondAttribute="trailing" constant="30" id="F2W-YV-CuC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ap6-E2-Azr" secondAttribute="trailing" constant="30" id="JIj-EW-OWM"/>
+                            <constraint firstItem="wi1-Pd-1tN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KwP-19-Wni"/>
+                            <constraint firstItem="ap6-E2-Azr" firstAttribute="top" secondItem="6OK-sk-KWJ" secondAttribute="bottom" constant="30" id="NUL-8c-5mB"/>
+                            <constraint firstItem="qKo-wo-8T6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q7a-Wh-x4a"/>
+                            <constraint firstItem="wTh-Wp-Kdc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RYI-Wi-G4e"/>
+                            <constraint firstItem="4ie-3h-fWr" firstAttribute="top" secondItem="zro-hY-8UB" secondAttribute="bottom" id="cDW-mO-CFJ"/>
+                            <constraint firstItem="wTh-Wp-Kdc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="czn-9Z-AcU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6OK-sk-KWJ" secondAttribute="trailing" constant="30" id="dIg-Rh-aug"/>
+                            <constraint firstItem="ap6-E2-Azr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="fj3-pN-InR"/>
+                            <constraint firstItem="6OK-sk-KWJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="gdE-Ge-nZE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ie-3h-fWr" secondAttribute="trailing" id="lnM-aw-lIk"/>
+                            <constraint firstAttribute="bottom" secondItem="wTh-Wp-Kdc" secondAttribute="bottom" id="p72-XD-Cp0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wi1-Pd-1tN" secondAttribute="trailing" priority="999" constant="30" id="qlK-US-NJc"/>
+                            <constraint firstItem="6OK-sk-KWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sF4-BY-teO"/>
+                            <constraint firstAttribute="trailing" secondItem="wTh-Wp-Kdc" secondAttribute="trailing" id="sr0-dv-gWG"/>
+                            <constraint firstItem="wi1-Pd-1tN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="999" constant="30" id="tdc-Wu-b3Q"/>
+                            <constraint firstItem="1K9-UF-3Po" firstAttribute="top" secondItem="ap6-E2-Azr" secondAttribute="bottom" constant="50" id="uye-EC-ZKV"/>
+                            <constraint firstItem="vH4-zR-l0e" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wNT-Oh-ZI6"/>
+                            <constraint firstItem="1K9-UF-3Po" firstAttribute="top" secondItem="vH4-zR-l0e" secondAttribute="bottom" id="wOy-fR-fKH"/>
+                            <constraint firstItem="qKo-wo-8T6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wi1-Pd-1tN" secondAttribute="bottom" constant="30" id="yNg-XG-F7e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rewardLabel" destination="4ie-3h-fWr" id="6ff-NH-Omw"/>
+                        <outlet property="rewardedVideoButton" destination="ap6-E2-Azr" id="lVc-ve-Gve"/>
+                        <outlet property="standardVideoButton" destination="6OK-sk-KWJ" id="zsy-aT-By0"/>
+                        <outlet property="versionLabel" destination="vH4-zR-l0e" id="AwB-dm-6ka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2000" height="2000"/>
+        <image name="diamond" width="512" height="512"/>
+    </resources>
+</document>
