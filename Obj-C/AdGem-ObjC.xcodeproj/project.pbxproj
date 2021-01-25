@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1873E73DC2D1F84636DE592 /* Pods_AdGem_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C1F109CE577798FAB6EABF /* Pods_AdGem_ObjC.framework */; };
+		1CF2F03AC6DB7899D0998771 /* Pods_AdGem_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0365F993F124F330E10C369E /* Pods_AdGem_ObjC.framework */; };
 		FAF184E1221DC27000EC09B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E0221DC27000EC09B7 /* AppDelegate.m */; };
 		FAF184E4221DC27000EC09B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E3221DC27000EC09B7 /* ViewController.m */; };
 		FAF184E7221DC27000EC09B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF184E5221DC27000EC09B7 /* Main.storyboard */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C93410B3827D345D96CC757 /* Pods-AdGem-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.release.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.release.xcconfig"; sourceTree = "<group>"; };
-		48822AED45EC38E5DC70F23F /* Pods-AdGem-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
-		E3C1F109CE577798FAB6EABF /* Pods_AdGem_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdGem_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0365F993F124F330E10C369E /* Pods_AdGem_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdGem_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6253DA43A279BB731464DFC /* Pods-AdGem-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.release.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		D1425738D8732B80F75B9E30 /* Pods-AdGem-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF184DC221DC27000EC09B7 /* AdGem-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdGem-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF184DF221DC27000EC09B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAF184E0221DC27000EC09B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1873E73DC2D1F84636DE592 /* Pods_AdGem_ObjC.framework in Frameworks */,
+				1CF2F03AC6DB7899D0998771 /* Pods_AdGem_ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,16 +47,16 @@
 		214267B7047D84690334F776 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48822AED45EC38E5DC70F23F /* Pods-AdGem-ObjC.debug.xcconfig */,
-				0C93410B3827D345D96CC757 /* Pods-AdGem-ObjC.release.xcconfig */,
+				D1425738D8732B80F75B9E30 /* Pods-AdGem-ObjC.debug.xcconfig */,
+				B6253DA43A279BB731464DFC /* Pods-AdGem-ObjC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		67FA4B9D1AA1D4F1070A4E5B /* Frameworks */ = {
+		E54A249A97EB53B0720141B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3C1F109CE577798FAB6EABF /* Pods_AdGem_ObjC.framework */,
+				0365F993F124F330E10C369E /* Pods_AdGem_ObjC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 				FAF184DE221DC27000EC09B7 /* AdGem-ObjC */,
 				FAF184DD221DC27000EC09B7 /* Products */,
 				214267B7047D84690334F776 /* Pods */,
-				67FA4B9D1AA1D4F1070A4E5B /* Frameworks */,
+				E54A249A97EB53B0720141B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,11 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF184F2221DC27100EC09B7 /* Build configuration list for PBXNativeTarget "AdGem-ObjC" */;
 			buildPhases = (
-				3DBFD01289C5D202ED7FCA47 /* [CP] Check Pods Manifest.lock */,
+				E35A8EFFD1E71F47BC706ABD /* [CP] Check Pods Manifest.lock */,
 				FAF184D8221DC27000EC09B7 /* Sources */,
 				FAF184D9221DC27000EC09B7 /* Frameworks */,
 				FAF184DA221DC27000EC09B7 /* Resources */,
-				90147D2B14E03CE2C042F583 /* [CP] Embed Pods Frameworks */,
+				C92548F57C3B3322D20068A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,7 +163,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3DBFD01289C5D202ED7FCA47 /* [CP] Check Pods Manifest.lock */ = {
+		C92548F57C3B3322D20068A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35A8EFFD1E71F47BC706ABD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,23 +200,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90147D2B14E03CE2C042F583 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,7 +353,7 @@
 		};
 		FAF184F3221DC27100EC09B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48822AED45EC38E5DC70F23F /* Pods-AdGem-ObjC.debug.xcconfig */;
+			baseConfigurationReference = D1425738D8732B80F75B9E30 /* Pods-AdGem-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -373,7 +373,7 @@
 		};
 		FAF184F4221DC27100EC09B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C93410B3827D345D96CC757 /* Pods-AdGem-ObjC.release.xcconfig */;
+			baseConfigurationReference = B6253DA43A279BB731464DFC /* Pods-AdGem-ObjC.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
