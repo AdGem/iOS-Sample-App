@@ -1,16 +1,16 @@
 PODS:
-  - AdGem (1.3.4)
+  - AdGem (1.5.0)
 
 DEPENDENCIES:
   - AdGem
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AdGem
 
 SPEC CHECKSUMS:
-  AdGem: 37debcd3c22c6ab8a8c188a7cd5a7223ed5bffd2
+  AdGem: 78b28f1fc751393b256a3f0c92d5ed11e6de3060
 
-PODFILE CHECKSUM: dc318bf178ea5e8bb25d40680cc6b625cc8882dc
+PODFILE CHECKSUM: 26de537271b0442e983207822c91a3ce75c97cf7
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.10.1
