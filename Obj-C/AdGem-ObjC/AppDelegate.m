@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-@import AdGemSdk;
+@import AdGem;
 
 
 @interface AppDelegate () <AdGemDelegate>
