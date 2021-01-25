@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AdGemSdk
+import AdGem
 
 class ViewController: UIViewController {
 

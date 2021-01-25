@@ -1,0 +1,11 @@
+framework module AdGem {
+  umbrella header "AdGem.h"
+
+  export *
+  module * { export * }
+}
+
+module AdGem.Swift {
+    header "AdGem-Swift.h"
+    requires objc
+}

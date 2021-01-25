@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-@import AdGemSdk;
+@import AdGem;
 
 @interface ViewController ()
 

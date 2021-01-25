@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AFAD2A24361A248887EB63A /* Pods_AdGemTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3EAC5D1AF0B9BA5770698 /* Pods_AdGemTester.framework */; };
 		FA06DAC4207E715A007CD076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06DAC3207E715A007CD076 /* AppDelegate.swift */; };
 		FA06DAC6207E715A007CD076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06DAC5207E715A007CD076 /* ViewController.swift */; };
 		FA06DAC9207E715A007CD076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA06DAC7207E715A007CD076 /* Main.storyboard */; };
 		FA06DACB207E715C007CD076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA06DACA207E715C007CD076 /* Assets.xcassets */; };
 		FA06DACE207E715C007CD076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA06DACC207E715C007CD076 /* LaunchScreen.storyboard */; };
-		FC2C005E16548419948D4333 /* Pods_AdGemTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D40871885E154535BC9194 /* Pods_AdGemTester.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,9 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B784E526336F9ED6AE9E26D /* Pods-AdGemTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGemTester.release.xcconfig"; path = "Target Support Files/Pods-AdGemTester/Pods-AdGemTester.release.xcconfig"; sourceTree = "<group>"; };
-		45D40871885E154535BC9194 /* Pods_AdGemTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdGemTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D67A6E6640F9E46F3ACC950 /* Pods-AdGemTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGemTester.debug.xcconfig"; path = "Target Support Files/Pods-AdGemTester/Pods-AdGemTester.debug.xcconfig"; sourceTree = "<group>"; };
+		0298BB93DF92C8AE46EA3B51 /* Pods-AdGemTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGemTester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdGemTester/Pods-AdGemTester.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE3EAC5D1AF0B9BA5770698 /* Pods_AdGemTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdGemTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		622421CEEB412BD9E9CC6A09 /* Pods-AdGemTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGemTester.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdGemTester/Pods-AdGemTester.release.xcconfig"; sourceTree = "<group>"; };
 		FA06DAC0207E715A007CD076 /* AdGemTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdGemTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA06DAC3207E715A007CD076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA06DAC5207E715A007CD076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,26 +46,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2C005E16548419948D4333 /* Pods_AdGemTester.framework in Frameworks */,
+				8AFAD2A24361A248887EB63A /* Pods_AdGemTester.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F4378A0383BB32EBF6C6794 /* Pods */ = {
+		773739B46FFD61D893EA06AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6D67A6E6640F9E46F3ACC950 /* Pods-AdGemTester.debug.xcconfig */,
-				3B784E526336F9ED6AE9E26D /* Pods-AdGemTester.release.xcconfig */,
+				0298BB93DF92C8AE46EA3B51 /* Pods-AdGemTester.debug.xcconfig */,
+				622421CEEB412BD9E9CC6A09 /* Pods-AdGemTester.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		8F73827131C72E338806013D /* Frameworks */ = {
+		8D75566EC9A138BBFC0FB78C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45D40871885E154535BC9194 /* Pods_AdGemTester.framework */,
+				4DE3EAC5D1AF0B9BA5770698 /* Pods_AdGemTester.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,8 +75,8 @@
 			children = (
 				FA06DAC2207E715A007CD076 /* AdGemTester */,
 				FA06DAC1207E715A007CD076 /* Products */,
-				2F4378A0383BB32EBF6C6794 /* Pods */,
-				8F73827131C72E338806013D /* Frameworks */,
+				773739B46FFD61D893EA06AA /* Pods */,
+				8D75566EC9A138BBFC0FB78C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,12 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA06DAD2207E715C007CD076 /* Build configuration list for PBXNativeTarget "AdGemTester" */;
 			buildPhases = (
-				EE2B1ECC53DFFC35BBF98825 /* [CP] Check Pods Manifest.lock */,
+				6759825DBC513635852BC449 /* [CP] Check Pods Manifest.lock */,
 				FA06DABC207E715A007CD076 /* Sources */,
 				FA06DABD207E715A007CD076 /* Frameworks */,
 				FA06DABE207E715A007CD076 /* Resources */,
 				FA06DAE7207E73B1007CD076 /* Embed Frameworks */,
-				009E4C8ADF3C3B94810F11DF /* [CP] Embed Pods Frameworks */,
+				6DEF741F5341D71D4966D3D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,7 +131,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = AdGem;
 				TargetAttributes = {
 					FA06DABF207E715A007CD076 = {
@@ -171,43 +171,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		009E4C8ADF3C3B94810F11DF /* [CP] Embed Pods Frameworks */ = {
+		6759825DBC513635852BC449 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdGemTester/Pods-AdGemTester-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdGemTester/Pods-AdGemTester-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGemTester/Pods-AdGemTester-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE2B1ECC53DFFC35BBF98825 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AdGemTester-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DEF741F5341D71D4966D3D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGemTester/Pods-AdGemTester-frameworks.sh",
+				"${PODS_ROOT}/AdGem/AdGem.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdGem.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGemTester/Pods-AdGemTester-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -270,7 +267,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -296,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -331,7 +327,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -351,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -362,44 +357,48 @@
 		};
 		FA06DAD3207E715C007CD076 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D67A6E6640F9E46F3ACC950 /* Pods-AdGemTester.debug.xcconfig */;
+			baseConfigurationReference = 0298BB93DF92C8AE46EA3B51 /* Pods-AdGemTester.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdGemTester",
+				);
 				INFOPLIST_FILE = AdGemTester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adgem.AdGemTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		FA06DAD4207E715C007CD076 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B784E526336F9ED6AE9E26D /* Pods-AdGemTester.release.xcconfig */;
+			baseConfigurationReference = 622421CEEB412BD9E9CC6A09 /* Pods-AdGemTester.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdGemTester",
+				);
 				INFOPLIST_FILE = AdGemTester/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adgem.AdGemTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
