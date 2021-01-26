@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9CA72C8B36ED20A70479D2D /* libPods-AdGem-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */; };
+		F4BE0D864596BC946189174B /* Pods_AdGem_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0E725001CD9BD70351BA6 /* Pods_AdGem_ObjC.framework */; };
 		FAF184E1221DC27000EC09B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E0221DC27000EC09B7 /* AppDelegate.m */; };
 		FAF184E4221DC27000EC09B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF184E3221DC27000EC09B7 /* ViewController.m */; };
 		FAF184E7221DC27000EC09B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF184E5221DC27000EC09B7 /* Main.storyboard */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
-		D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdGem-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.release.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		3EB0E725001CD9BD70351BA6 /* Pods_AdGem_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdGem_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2B0DA14527B7244D7F097C /* Pods-AdGem-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		B5EF65F638B6E15EDECC1796 /* Pods-AdGem-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdGem-ObjC.release.xcconfig"; path = "Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 		FAF184DC221DC27000EC09B7 /* AdGem-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdGem-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF184DF221DC27000EC09B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAF184E0221DC27000EC09B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9CA72C8B36ED20A70479D2D /* libPods-AdGem-ObjC.a in Frameworks */,
+				F4BE0D864596BC946189174B /* Pods_AdGem_ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,16 +47,16 @@
 		214267B7047D84690334F776 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */,
-				EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */,
+				5F2B0DA14527B7244D7F097C /* Pods-AdGem-ObjC.debug.xcconfig */,
+				B5EF65F638B6E15EDECC1796 /* Pods-AdGem-ObjC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AFA289C9F56C878A50643F0B /* Frameworks */ = {
+		D6DD79C89D5ABD526C9692F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1E33DFB3B10147487C0EC14 /* libPods-AdGem-ObjC.a */,
+				3EB0E725001CD9BD70351BA6 /* Pods_AdGem_ObjC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 				FAF184DE221DC27000EC09B7 /* AdGem-ObjC */,
 				FAF184DD221DC27000EC09B7 /* Products */,
 				214267B7047D84690334F776 /* Pods */,
-				AFA289C9F56C878A50643F0B /* Frameworks */,
+				D6DD79C89D5ABD526C9692F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,11 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF184F2221DC27100EC09B7 /* Build configuration list for PBXNativeTarget "AdGem-ObjC" */;
 			buildPhases = (
-				E02F2F95FF552B6119637863 /* [CP] Check Pods Manifest.lock */,
+				7E34C875B0CB35431966FD7D /* [CP] Check Pods Manifest.lock */,
 				FAF184D8221DC27000EC09B7 /* Sources */,
 				FAF184D9221DC27000EC09B7 /* Frameworks */,
 				FAF184DA221DC27000EC09B7 /* Resources */,
-				2F16C4C70CD9310C370F8AF0 /* [CP] Embed Pods Frameworks */,
+				B8591130AA9DBBFF0E48CCB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,7 +123,7 @@
 		FAF184D4221DC27000EC09B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "AdGem LLC";
 				TargetAttributes = {
 					FAF184DB221DC27000EC09B7 = {
@@ -163,29 +163,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F16C4C70CD9310C370F8AF0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh",
-				"${PODS_ROOT}/AdGem/AdGem.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdGem.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E02F2F95FF552B6119637863 /* [CP] Check Pods Manifest.lock */ = {
+		7E34C875B0CB35431966FD7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,6 +183,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8591130AA9DBBFF0E48CCB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdGem-ObjC/Pods-AdGem-ObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -268,6 +263,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -327,6 +323,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -356,13 +353,14 @@
 		};
 		FAF184F3221DC27100EC09B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C8152385A14C806530F3D2E /* Pods-AdGem-ObjC.debug.xcconfig */;
+			baseConfigurationReference = 5F2B0DA14527B7244D7F097C /* Pods-AdGem-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
 				INFOPLIST_FILE = "AdGem-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,13 +373,14 @@
 		};
 		FAF184F4221DC27100EC09B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EABB63827831468900CCB117 /* Pods-AdGem-ObjC.release.xcconfig */;
+			baseConfigurationReference = B5EF65F638B6E15EDECC1796 /* Pods-AdGem-ObjC.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34ZPAFZ5P4;
 				INFOPLIST_FILE = "AdGem-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

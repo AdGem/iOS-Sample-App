@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AdGem
+import AdGemSdk
 
 class ViewController: UIViewController {
 
@@ -39,14 +39,6 @@ class ViewController: UIViewController {
 
     @IBAction func showOfferwallTapped(_ sender: Any) {
         AdGem.showOfferWall()
-    }
-
-    @IBAction func showStandardVideoTapped(_ sender: Any) {
-        AdGem.showVideoAd()
-    }
-
-    @IBAction func showRewardedVideoTapped(_ sender: Any) {
-        AdGem.showRewardedVideoAd()
     }
 
     @objc func videosReady() {

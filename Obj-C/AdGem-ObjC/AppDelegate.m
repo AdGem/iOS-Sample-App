@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-@import AdGem;
+@import AdGemSdk;
 
 
 @interface AppDelegate () <AdGemDelegate>
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     AdGem.delegate = self;
-    [AdGem startSessionWithAppId:1 usesStandardVideo:YES usesRewardedVideo:YES usesOfferwall:YES];
+    [AdGem startSessionWithAppId:1 usesStandardVideo:NO usesRewardedVideo:YES usesOfferwall:YES];
     return YES;
 }
 
