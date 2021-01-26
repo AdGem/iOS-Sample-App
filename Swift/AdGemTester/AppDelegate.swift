@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdGemDelegate {
   internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     AdGem.delegate = self
-    AdGem.startSession(appId: 1, usesStandardVideo: true, usesRewardedVideo: true, usesOfferwall: true)
+    AdGem.startSession(appId: 1, usesStandardVideo: false, usesRewardedVideo: true, usesOfferwall: true)
     return true
   }
   

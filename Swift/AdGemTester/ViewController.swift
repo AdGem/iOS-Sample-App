@@ -41,14 +41,6 @@ class ViewController: UIViewController {
         AdGem.showOfferWall()
     }
 
-    @IBAction func showStandardVideoTapped(_ sender: Any) {
-        AdGem.showVideoAd()
-    }
-
-    @IBAction func showRewardedVideoTapped(_ sender: Any) {
-        AdGem.showRewardedVideoAd()
-    }
-
     @objc func videosReady() {
         DispatchQueue.main.async {
             self.standardVideoButton.isHidden = false

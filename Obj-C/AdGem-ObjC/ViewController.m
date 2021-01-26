@@ -47,12 +47,5 @@
     [AdGem showOfferWall];
 }
 
-- (IBAction)showStandardVideoTapped:(id)sender {
-    [AdGem showVideoAd];
-}
-
-- (IBAction)showRewardedVideoTapped:(id)sender {
-    [AdGem showRewardedVideoAd];
-}
 
 @end
