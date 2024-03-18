@@ -37,7 +37,7 @@ jobs:
           xcodebuild -list -workspace "Swift/AdGemTester.xcworkspace"
 
       - name: Build Objective-C workspace
-        run: /usr/bin/xcodebuild -workspace "Obj-C/AdGem-ObjC.xcworkspace" -scheme "AdGemSdk Staging" -destination 'platform=iOS Simulator,name=iPhone 11' build
+        run: /usr/bin/xcodebuild -workspace "Obj-C/AdGem-ObjC.xcworkspace" -scheme "AdGem" -destination 'platform=iOS Simulator,name=iPhone 11' build
 
       - name: Build Swift workspace
-        run: /usr/bin/xcodebuild -workspace "Swift/AdGemTester.xcworkspace" -scheme "AdGemSdk Staging" -destination 'platform=iOS Simulator,name=iPhone 11' build
+        run: /usr/bin/xcodebuild -workspace "Swift/AdGemTester.xcworkspace" -scheme "AdGem" -destination 'platform=iOS Simulator,name=iPhone 11' build
