@@ -8,9 +8,6 @@ on:
   workflow_call:
   pull_request:
 
-env:
-  JAVA_VERSION: 17
-
 jobs:
   build:
     runs-on: macos-latest
@@ -26,7 +23,12 @@ jobs:
       - name: Install cocoapods
         run: gem install cocoapods
 
-      - name: Run cocoapods
+      - name: Run cocoapods in Obj-C
+        working-directory: Obj-C
+        run: pod install
+
+      - name: Run cocoapods in Swift
+        working-directory: Swift
         run: pod install
 
       - name: Get Schemes
