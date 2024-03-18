@@ -1,0 +1,43 @@
+name: test
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  workflow_call:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      XC_VERSION: 14.2.0
+    steps:
+      - name: Activate configured Xcode
+        run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install cocoapods
+        run: gem install cocoapods
+
+      - name: Run cocoapods in Obj-C
+        working-directory: Obj-C
+        run: pod install
+
+      - name: Run cocoapods in Swift
+        working-directory: Swift
+        run: pod install
+
+      - name: Get Schemes
+        run: |
+          xcodebuild -list -workspace "Obj-C/AdGem-ObjC.xcworkspace"
+          xcodebuild -list -workspace "Swift/AdGemTester.xcworkspace"
+
+      - name: Build Objective-C workspace
+        run: /usr/bin/xcodebuild -workspace "Obj-C/AdGem-ObjC.xcworkspace" -scheme "AdGem" -destination 'platform=iOS Simulator,name=iPhone 11' build
+
+      - name: Build Swift workspace
+        run: /usr/bin/xcodebuild -workspace "Swift/AdGemTester.xcworkspace" -scheme "AdGem" -destination 'platform=iOS Simulator,name=iPhone 11' build
