@@ -20,7 +20,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     AdGem.delegate = self;
-    [AdGem startSessionWithAppId:1 usesStandardVideo:NO usesRewardedVideo:YES usesOfferwall:YES];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy/MM/dd HH:mm";
+    NSDate *someDateTime = [formatter dateFromString:@"2016/10/08 22:31"];
+
+    NSString *idString;
+
+    if ([NSUserDefaults.standardUserDefaults stringForKey:@"AdGem-UserId"] != nil) {
+      idString = [NSUserDefaults.standardUserDefaults stringForKey:@"AdGem-UserId"];
+    } else {
+      [NSUserDefaults.standardUserDefaults setObject:[[NSUUID UUID] UUIDString] forKey:@"AdGem-UserId"];
+      [NSUserDefaults.standardUserDefaults synchronize];
+    }
+
+    AdGemPlayerMetadata *metaData = [[Builder initWithPlayerIdWithPlayerId:idString] build];
+    [AdGem setPlayerMetaDataWithMetaData:metaData];
+
     return YES;
 }
 
@@ -51,50 +67,27 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-- (void)adGemDidFinishingCaching {
-    NSLog(@"AdGem Videos did Finish Caching");
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideosReady" object:nil];
-}
-
-- (void)adGemOfferwallClosed {
+- (void)offerwallClosed {
     NSLog(@"AdGem Offerwall Closed");
 }
 
-- (void)adGemOfferwallFailedToLoadWithError:(NSError * _Nonnull)error {
+- (void)offerwallLoadingFailedWithError:(NSError * _Nonnull)error {
     NSLog(@"AdGem Offerwall Failed to Load: %@", error.localizedDescription);
 }
 
-- (void)adGemOfferwallFinishedLoading {
+- (void)offerwallLoadingFinished {
     NSLog(@"AdGem Offerwall Finished Loading.");
 }
 
-- (void)adGemOfferwallStartedLoading {
+- (void)offerwallLoadingStarted {
     NSLog(@"AdGem Offerwall Started Loading.");
 }
 
-- (void)adGemRewardUserWithAmount:(NSInteger)amount {
+- (void)offerwallRewardReceivedWithAmount:(NSInteger)amount {
     NSLog(@"AdGem Reward User from offerwall.");
     NSInteger coins = [NSUserDefaults.standardUserDefaults integerForKey:@"coins"];
     [NSUserDefaults.standardUserDefaults setInteger:coins + amount forKey:@"coins"];
     [NSUserDefaults.standardUserDefaults synchronize];
-}
-
-- (void)adGemVideoAdFinishedPlayingWithCancelled:(BOOL)cancelled {
-    NSLog(@"AdGem Ad Finished Playing. Cancelled: %i", cancelled);
-
-}
-
-- (void)adGemVideoAdStartedPlaying {
-    NSLog(@"AdGem Ad Started Playing");
-}
-
-- (void)adGemVideoDidClickAfterVideo {
-    NSLog(@"AdGem Ad Did Click After Video");
-}
-
-- (void)adGemVideoFailedToLoadWithErrorMessage:(NSString * _Nonnull)errorMessage {
-    NSLog(@"AdGem Ad Failed to Load: %@", errorMessage);
 }
 
 @end

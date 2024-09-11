@@ -44,7 +44,7 @@
 }
 
 - (IBAction)showOfferwallTapped:(id)sender {
-    [AdGem showOfferWall];
+    [AdGem showOfferwall];
 }
 
 
