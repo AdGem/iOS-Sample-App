@@ -1,5 +1,9 @@
 # iOS-Sample-App
 
+[![Build/Tests](https://github.com/AdGem/iOS-Sample-App/actions/workflows/build.yml/badge.svg)](https://github.com/AdGem/iOS-Sample-App/actions/workflows/build.yml)
+[![Release](https://github.com/AdGem/iOS-Sample-App/actions/workflows/release.yml/badge.svg)](https://github.com/AdGem/iOS-Sample-App/actions/workflows/release.yml)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 A sample app demonstrating the integration and usage of the AdGem SDK for iOS.
 
 ## Project Structure
