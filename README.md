@@ -1,67 +1,124 @@
 # iOS-Sample-App
-A sample app of the AdGem SDK
 
-Download
---------
-Install CocoaPods (v1.9 or newer). You can find more information on how to install CocoaPods [here](https://guides.cocoapods.org/using/getting-started.html)
-Edit your Podfile and add the following line:
-```
-pod 'AdGem'
-```
-Run `pod install` in your terminal window. Cocoa pods will automatically download the framework and install it into your project.
+[![Build/Tests](https://github.com/AdGem/iOS-Sample-App/actions/workflows/build.yml/badge.svg)](https://github.com/AdGem/iOS-Sample-App/actions/workflows/build.yml)
+[![Release](https://github.com/AdGem/iOS-Sample-App/actions/workflows/release.yml/badge.svg)](https://github.com/AdGem/iOS-Sample-App/actions/workflows/release.yml)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Configure
---------
-Add a new **AdGemAppID** key to the app's `Info.plist` file replacing **ADGEM_APP_ID** with your AdGem app ID from the AdGem publisher dashboard.
-```
-<key>AdGemAppID</key>
-<integer>ADGEM_APP_ID</integer>
-```
-API Overwiev
---------
-All communication with the SDK happens via the **AdGem** class. In order to access it the following import directive is required:
-```
-import AdGemSdk
-```
-Please note there is no need to store instance of AdGem globally. The SDK will cache its instance on a first call and will always return the same one for all subsequent calls to AdGem
+A sample app demonstrating the integration and usage of the AdGem SDK for iOS.
 
-### Player Metadata:
-For increased fraud protection, we require you set the playerId (a unique id for your user) parameter.
-```swift
-  let metaData = AdGemPlayerMetadata.Builder
-    .initWithPlayerId(playerId: "abc123")
-    .playerAge(age: 20)
-    .playerGender(gender: .male)
-    .playerLevel(level: 5)
-    .playerPlacement(place: 1000)
-    .playerPayer(spentMoney: true)
-    .playerIAPTotal(iapTotal: 10.0)
-    .playerCreatedAt(creationDate: someDateTime!)
-    .customField1(field: "custom_field_1")
-    .customField2(field: "custom_field_2")
-    .customField3(field: "custom_field_3")
-    .customField4(field: "custom_field_4")
-    .customField5(field: "custom_field_5")
-    .build()
+## Project Structure
 
-  AdGem.setPlayerMetaData(metaData: metaData)
-```
-### Offer Wall:
-Use the AdGem class to show Offer Wall in your project:
-```swift
-AdGem.showOfferwall()
-```
+This repository contains two sample applications:
 
-The following delegate methods are available:
-```swift
-// Called when the offer wall starts loading on the users device:
-func offerwallLoadingStarted() {}
-// Called when the offer wall has finished loading on the users device:
-func offerwallLoadingFinished() {}
-// Called when the offer wall has closed on the users device:
-func offerwallClosed() {}
-// Called if the offer wall has failed to load due to an error:
-func offerwallLoadingFailed(error: Error) {}
-// Called to reward the user with your type of currency:
-func offerwallRewardReceived(amount: Int) {}
-```
+1. **Objective-C Sample App**
+   - Located in the `Obj-C` directory
+   - Project name: `AdGem-ObjC`
+
+2. **Swift Sample App**
+   - Located in the `Swift` directory
+   - Project name: `AdGemTester`
+
+## Setup Instructions
+
+### Objective-C
+
+1. Navigate to the `Obj-C` directory
+2. Open `AdGem-ObjC.xcworkspace` in Xcode
+3. Run `pod install` to install dependencies
+4. Build and run the project
+
+### Swift
+
+1. Navigate to the `Swift` directory
+2. Open `AdGemTester.xcworkspace` in Xcode
+3. Run `pod install` to install dependencies
+4. Build and run the project
+
+## Basic Usage
+
+The sample apps demonstrate how to integrate and use the AdGem SDK. Here's a basic overview of the integration process:
+
+1. Import the AdGem SDK in your `AppDelegate`:
+
+    ```swift
+    import AdGemSdk
+    ```
+
+2. Implement the `AdGemDelegate` protocol in your `AppDelegate`:
+
+    ```swift
+    class AppDelegate: UIResponder, UIApplicationDelegate, AdGemDelegate {
+      // ...
+    }
+    ```
+
+3. Initialize the AdGem SDK in the `application(_:didFinishLaunchingWithOptions:)` method:
+
+    ```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+      AdGem.delegate = self
+      AdGem.startSession(appId: YOUR_APP_ID, usesStandardVideo: false, usesRewardedVideo: true, usesOfferwall: true)
+      return true
+    }
+    ```
+
+4. Implement the required delegate methods to handle AdGem events:
+
+    ```swift
+    func adGemDidFinishingCaching() {
+        // Handle caching completion
+    }
+
+    func adGemVideoAdStartedPlaying() {
+        // Handle video ad start
+    }
+
+    func adGemVideoAdFinishedPlaying(cancelled: Bool) {
+        // Handle video ad finish
+    }
+
+    func adGemVideoFailedToLoad(errorMessage: String) {
+        // Handle video load failure
+    }
+
+    func adGemRewardUser(amount: Int) {
+        // Handle user reward
+    }
+
+    func adGemOfferwallStartedLoading() {
+        // Handle offerwall start
+    }
+
+    func adGemOfferwallFinishedLoading() {
+        // Handle offerwall load completion
+    }
+
+    func adGemOfferwallFailedToLoad(error: Error) {
+        // Handle offerwall load failure
+    }
+
+    func adGemOfferwallClosed() {
+        // Handle offerwall close
+    }
+    ```
+
+## Features Demonstrated
+
+- Integration of AdGem SDK
+- Handling of video ads (rewarded and standard)
+- Implementation of offerwall functionality
+- User reward management
+
+## Requirements
+
+- iOS 11.0+
+- Xcode 12.0+
+- Swift 5.0+ (for Swift project)
+
+## Dependencies
+
+The project uses CocoaPods for dependency management. The main dependency is:
+
+- **AdGem SDK**
+
+To install dependencies, run `pod install` in the respective project directories.
