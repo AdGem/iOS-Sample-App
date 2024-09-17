@@ -1,0 +1,332 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AdGemSdk
+@_exported import AdGemSdk
+import AdSupport
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import Security
+import StoreKit
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public enum AdGemGender : Swift.Int {
+  case male
+  case female
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class AdGemPlayerMetadata : ObjectiveC.NSObject {
+  @objc final public let entries: [Swift.String : Swift.String]
+  @_hasMissingDesignatedInitializers @objc public class Builder : ObjectiveC.NSObject {
+    @objc public static func initWithPlayerId(playerId: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerAge(age: Swift.Int) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerGender(gender: AdGemSdk.AdGemGender) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerLevel(level: Swift.Int) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerPlacement(place: Swift.Int) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerCreatedAt(creationDate: Foundation.Date) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerPayer(spentMoney: Swift.Bool) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func playerIAPTotal(iapTotal: Swift.Double) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func customField1(field: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func customField2(field: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func customField3(field: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func customField4(field: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func customField5(field: Swift.String) -> AdGemSdk.AdGemPlayerMetadata.Builder
+    @objc public func build() -> AdGemSdk.AdGemPlayerMetadata
+    @objc deinit
+  }
+  @objc deinit
+}
+extension Foundation.Bundle {
+  public class var adGem: Foundation.Bundle {
+    get
+  }
+}
+public typealias Padding = Security.SecPadding
+extension CoreFoundation.CFString : Swift.Hashable {
+  public var hashValue: Swift.Int {
+    get
+  }
+  public static func == (lhs: CoreFoundation.CFString, rhs: CoreFoundation.CFString) -> Swift.Bool
+}
+public class Signature {
+  public enum DigestType {
+    case sha1
+    case sha224
+    case sha256
+    case sha384
+    case sha512
+    public static func == (a: AdGemSdk.Signature.DigestType, b: AdGemSdk.Signature.DigestType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let data: Foundation.Data
+  public init(data: Foundation.Data)
+  convenience public init(base64Encoded base64String: Swift.String) throws
+  public var base64String: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum SwiftyRSAError : Swift.Error {
+  case pemDoesNotContainKey
+  case keyRepresentationFailed(error: CoreFoundation.CFError?)
+  case keyCreateFailed(error: CoreFoundation.CFError?)
+  case keyAddFailed(status: Darwin.OSStatus)
+  case keyCopyFailed(status: Darwin.OSStatus)
+  case tagEncodingFailed
+  case asn1ParsingFailed
+  case invalidAsn1RootNode
+  case invalidAsn1Structure
+  case invalidBase64String
+  case chunkDecryptFailed(index: Swift.Int)
+  case chunkEncryptFailed(index: Swift.Int)
+  case stringToDataConversionFailed
+  case dataToStringConversionFailed
+  case invalidDigestSize(digestSize: Swift.Int, maxChunkSize: Swift.Int)
+  case signatureCreateFailed(status: Darwin.OSStatus)
+  case signatureVerifyFailed(status: Darwin.OSStatus)
+  case pemFileNotFound(name: Swift.String)
+  case derFileNotFound(name: Swift.String)
+  case notAPublicKey
+  case notAPrivateKey
+}
+public struct AdGemDlogMode : Swift.OptionSet {
+  public let rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public static let none: AdGemSdk.AdGemDlogMode
+  public static let fileName: AdGemSdk.AdGemDlogMode
+  public static let funcName: AdGemSdk.AdGemDlogMode
+  public static let line: AdGemSdk.AdGemDlogMode
+  public static let date: AdGemSdk.AdGemDlogMode
+  public static let allOptions: AdGemSdk.AdGemDlogMode
+  public static let fullCodeLocation: AdGemSdk.AdGemDlogMode
+  public typealias ArrayLiteralElement = AdGemSdk.AdGemDlogMode
+  public typealias Element = AdGemSdk.AdGemDlogMode
+  public typealias RawValue = Swift.UInt
+}
+public struct AdGemDlog {
+  public typealias Printable = Any?
+  public static var mode: AdGemSdk.AdGemDlogMode
+  public static func print(_ items: AdGemSdk.AdGemDlog.Printable..., separator: Swift.String = " ", terminator: Swift.String = "\n", _ file: Swift.String = #file, _ function: Swift.String = #function, _ line: Swift.Int = #line)
+}
+extension Swift.String {
+  public var ns: Foundation.NSString {
+    get
+  }
+  public var lastPathComponent: Swift.String {
+    get
+  }
+  public var stringByDeletingPathExtension: Swift.String {
+    get
+  }
+}
+extension UIKit.UIFont {
+  public static func register(from url: Foundation.URL) throws
+}
+@objc(PublicKey) public class _objc_PublicKey : ObjectiveC.NSObject, AdGemSdk.Key {
+  @objc public var reference: Security.SecKey {
+    @objc get
+  }
+  @objc public var originalData: Foundation.Data? {
+    @objc get
+  }
+  @objc public func pemString() throws -> Swift.String
+  @objc public func data() throws -> Foundation.Data
+  @objc public func base64String() throws -> Swift.String
+  required public init(swiftValue: AdGemSdk.PublicKey)
+  @objc required public init(data: Foundation.Data) throws
+  @objc required public init(reference: Security.SecKey) throws
+  @objc required public init(base64Encoded base64String: Swift.String) throws
+  @objc required public init(pemEncoded pemString: Swift.String) throws
+  @objc required public init(pemNamed pemName: Swift.String, in bundle: Foundation.Bundle) throws
+  @objc required public init(derNamed derName: Swift.String, in bundle: Foundation.Bundle) throws
+  @objc public static func publicKeys(pemEncoded pemString: Swift.String) -> [AdGemSdk._objc_PublicKey]
+  @objc deinit
+}
+@objc(PrivateKey) public class _objc_PrivateKey : ObjectiveC.NSObject, AdGemSdk.Key {
+  @objc public var reference: Security.SecKey {
+    @objc get
+  }
+  @objc public var originalData: Foundation.Data? {
+    @objc get
+  }
+  @objc public func pemString() throws -> Swift.String
+  @objc public func data() throws -> Foundation.Data
+  @objc public func base64String() throws -> Swift.String
+  required public init(swiftValue: AdGemSdk.PrivateKey)
+  @objc required public init(data: Foundation.Data) throws
+  @objc required public init(reference: Security.SecKey) throws
+  @objc required public init(base64Encoded base64String: Swift.String) throws
+  @objc required public init(pemEncoded pemString: Swift.String) throws
+  @objc required public init(pemNamed pemName: Swift.String, in bundle: Foundation.Bundle) throws
+  @objc required public init(derNamed derName: Swift.String, in bundle: Foundation.Bundle) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(VerificationResult) public class _objc_VerificationResult : ObjectiveC.NSObject {
+  @objc final public let isSuccessful: Swift.Bool
+  @objc deinit
+}
+@objc(ClearMessage) public class _objc_ClearMessage : ObjectiveC.NSObject, AdGemSdk.Message {
+  @objc public var base64String: Swift.String {
+    @objc get
+  }
+  @objc public var data: Foundation.Data {
+    @objc get
+  }
+  required public init(swiftValue: AdGemSdk.ClearMessage)
+  @objc required public init(data: Foundation.Data)
+  @objc required public init(string: Swift.String, using rawEncoding: Swift.UInt) throws
+  @objc required public init(base64Encoded base64String: Swift.String) throws
+  @objc public func string(encoding rawEncoding: Swift.UInt) throws -> Swift.String
+  @objc public func encrypted(with key: AdGemSdk._objc_PublicKey, padding: AdGemSdk.Padding) throws -> AdGemSdk._objc_EncryptedMessage
+  @objc public func signed(with key: AdGemSdk._objc_PrivateKey, digestType: AdGemSdk._objc_Signature.DigestType) throws -> AdGemSdk._objc_Signature
+  @objc public func verify(with key: AdGemSdk._objc_PublicKey, signature: AdGemSdk._objc_Signature, digestType: AdGemSdk._objc_Signature.DigestType) throws -> AdGemSdk._objc_VerificationResult
+  @objc deinit
+}
+@objc(EncryptedMessage) public class _objc_EncryptedMessage : ObjectiveC.NSObject, AdGemSdk.Message {
+  @objc public var base64String: Swift.String {
+    @objc get
+  }
+  @objc public var data: Foundation.Data {
+    @objc get
+  }
+  required public init(swiftValue: AdGemSdk.EncryptedMessage)
+  @objc required public init(data: Foundation.Data)
+  @objc required public init(base64Encoded base64String: Swift.String) throws
+  @objc public func decrypted(with key: AdGemSdk._objc_PrivateKey, padding: AdGemSdk.Padding) throws -> AdGemSdk._objc_ClearMessage
+  @objc deinit
+}
+@objc(Signature) public class _objc_Signature : ObjectiveC.NSObject {
+  @objc public enum DigestType : Swift.Int {
+    case sha1
+    case sha224
+    case sha256
+    case sha384
+    case sha512
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public var base64String: Swift.String {
+    @objc get
+  }
+  @objc public var data: Foundation.Data {
+    @objc get
+  }
+  required public init(swiftValue: AdGemSdk.Signature)
+  @objc public init(data: Foundation.Data)
+  @objc required public init(base64Encoded base64String: Swift.String) throws
+  @objc deinit
+}
+public protocol Key : AnyObject {
+  var reference: Security.SecKey { get }
+  var originalData: Foundation.Data? { get }
+  init(data: Foundation.Data) throws
+  init(reference: Security.SecKey) throws
+  init(base64Encoded base64String: Swift.String) throws
+  init(pemEncoded pemString: Swift.String) throws
+  init(pemNamed pemName: Swift.String, in bundle: Foundation.Bundle) throws
+  init(derNamed derName: Swift.String, in bundle: Foundation.Bundle) throws
+  func pemString() throws -> Swift.String
+  func data() throws -> Foundation.Data
+  func base64String() throws -> Swift.String
+}
+extension AdGemSdk.Key {
+  public func base64String() throws -> Swift.String
+  public func data() throws -> Foundation.Data
+  public init(base64Encoded base64String: Swift.String) throws
+  public init(pemEncoded pemString: Swift.String) throws
+  public init(pemNamed pemName: Swift.String, in bundle: Foundation.Bundle = Bundle.main) throws
+  public init(derNamed derName: Swift.String, in bundle: Foundation.Bundle = Bundle.main) throws
+}
+public class ClearMessage : AdGemSdk.Message {
+  final public let data: Foundation.Data
+  required public init(data: Foundation.Data)
+  convenience public init(string: Swift.String, using encoding: Swift.String.Encoding) throws
+  public func string(encoding: Swift.String.Encoding) throws -> Swift.String
+  public func encrypted(with key: AdGemSdk.PublicKey, padding: AdGemSdk.Padding) throws -> AdGemSdk.EncryptedMessage
+  public func signed(with key: AdGemSdk.PrivateKey, digestType: AdGemSdk.Signature.DigestType) throws -> AdGemSdk.Signature
+  public func verify(with key: AdGemSdk.PublicKey, signature: AdGemSdk.Signature, digestType: AdGemSdk.Signature.DigestType) throws -> Swift.Bool
+  @objc deinit
+}
+public protocol Message {
+  var data: Foundation.Data { get }
+  var base64String: Swift.String { get }
+  init(data: Foundation.Data)
+  init(base64Encoded base64String: Swift.String) throws
+}
+extension AdGemSdk.Message {
+  public var base64String: Swift.String {
+    get
+  }
+  public init(base64Encoded base64String: Swift.String) throws
+}
+@objc public protocol AdGemDelegate {
+  @objc func offerwallLoadingStarted()
+  @objc func offerwallLoadingFinished()
+  @objc func offerwallLoadingFailed(error: any Swift.Error)
+  @objc func offerwallRewardReceived(amount: Swift.Int)
+  @objc func offerwallClosed()
+}
+@_inheritsConvenienceInitializers @objc public class AdGem : ObjectiveC.NSObject {
+  @objc public static let sdkVersion: Swift.String
+  @objc public static let prodBaseURL: Swift.String
+  @objc public class var delegate: (any AdGemSdk.AdGemDelegate)? {
+    @objc get
+    @objc set(d)
+  }
+  @objc public class func setPlayerMetaData(metaData: AdGemSdk.AdGemPlayerMetadata)
+  @objc public class func showOfferwall()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public var modelIdentifier: Swift.String {
+    get
+  }
+}
+public class EncryptedMessage : AdGemSdk.Message {
+  final public let data: Foundation.Data
+  required public init(data: Foundation.Data)
+  public func decrypted(with key: AdGemSdk.PrivateKey, padding: AdGemSdk.Padding) throws -> AdGemSdk.ClearMessage
+  @objc deinit
+}
+public class PublicKey : AdGemSdk.Key {
+  final public let reference: Security.SecKey
+  final public let originalData: Foundation.Data?
+  public func pemString() throws -> Swift.String
+  required public init(reference: Security.SecKey) throws
+  required public init(data: Foundation.Data) throws
+  public static func publicKeys(pemEncoded pemString: Swift.String) -> [AdGemSdk.PublicKey]
+  @objc deinit
+}
+public class PrivateKey : AdGemSdk.Key {
+  final public let reference: Security.SecKey
+  final public let originalData: Foundation.Data?
+  public func pemString() throws -> Swift.String
+  required public init(reference: Security.SecKey) throws
+  required public init(data: Foundation.Data) throws
+  @objc deinit
+}
+extension AdGemSdk.AdGemGender : Swift.Equatable {}
+extension AdGemSdk.AdGemGender : Swift.Hashable {}
+extension AdGemSdk.AdGemGender : Swift.RawRepresentable {}
+extension AdGemSdk.Signature.DigestType : Swift.Equatable {}
+extension AdGemSdk.Signature.DigestType : Swift.Hashable {}
+extension AdGemSdk._objc_Signature.DigestType : Swift.Equatable {}
+extension AdGemSdk._objc_Signature.DigestType : Swift.Hashable {}
+extension AdGemSdk._objc_Signature.DigestType : Swift.RawRepresentable {}

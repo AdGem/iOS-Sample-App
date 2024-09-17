@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.versionLabel.text = "iOS - V\(AdGem.sdkVersion)"
-
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.videosReady), name: videosReadyNotification, object: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -38,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showOfferwallTapped(_ sender: Any) {
-        AdGem.showOfferWall()
+        AdGem.showOfferwall()
     }
 
     @objc func videosReady() {

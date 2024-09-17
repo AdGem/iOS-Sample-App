@@ -20,13 +20,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2D6EE78CE07141419F2D4DFE24BCC7EB /* Pods-AdGemTester-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC332B4C662A1DAA89DA93F174673BA9 /* Pods-AdGemTester-dummy.m */; };
-		40235F0D8B897D4D10A8BE7BB4B4BDC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		5F24DF739F698188245605BA6495A419 /* Pods-AdGemTester-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E9C609F29B0E8B9563537EC8438BA2 /* Pods-AdGemTester-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ED5046B3ABEC67BDBC4109656C460DD /* Pods-AdGemTester-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E9C609F29B0E8B9563537EC8438BA2 /* Pods-AdGemTester-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AE3E2947C6AE629E479BC3D00D3F152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A9754A63A4D99097FFE0F1E839E09C80 /* Pods-AdGemTester-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC332B4C662A1DAA89DA93F174673BA9 /* Pods-AdGemTester-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4153F1C62C75EB6C5FF3FC55F329A5ED /* PBXContainerItemProxy */ = {
+		E1D402D5D1B9A46D11CEE74644F6100B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -51,15 +51,15 @@
 		DC332B4C662A1DAA89DA93F174673BA9 /* Pods-AdGemTester-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AdGemTester-dummy.m"; sourceTree = "<group>"; };
 		F09EB4AF2EDBB0FCABB3C973DAF7CB8A /* Pods-AdGemTester-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AdGemTester-Info.plist"; sourceTree = "<group>"; };
 		F1F5DA7BE273086A958CA1D01B503B59 /* Pods-AdGemTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdGemTester.release.xcconfig"; sourceTree = "<group>"; };
-		F5920DA34DCFC019943BDC232E7F2E3B /* Pods_AdGemTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AdGemTester.framework; path = "Pods-AdGemTester.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5920DA34DCFC019943BDC232E7F2E3B /* Pods-AdGemTester */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AdGemTester"; path = Pods_AdGemTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B4369411B33FFB14579E4DD6E08601F /* Frameworks */ = {
+		82067CB28A4D136054F416878AD70DCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40235F0D8B897D4D10A8BE7BB4B4BDC6 /* Foundation.framework in Frameworks */,
+				6AE3E2947C6AE629E479BC3D00D3F152 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +101,14 @@
 			path = "../Target Support Files/AdGem";
 			sourceTree = "<group>";
 		};
+		8437B7393E68F06A82BC1111433BB08A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5920DA34DCFC019943BDC232E7F2E3B /* Pods-AdGemTester */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9523AB290E6897EB36774A5B22B4AC24 /* Pods-AdGemTester */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +132,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				E40F08F0C768739B3CBDF88774563DC9 /* Pods */,
-				F6AFDF4FAEF6DA6C536CBC439786B952 /* Products */,
+				8437B7393E68F06A82BC1111433BB08A /* Products */,
 				3022689258A0AFBFD4AB7B554B4FDE87 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -155,22 +163,14 @@
 			path = AdGem;
 			sourceTree = "<group>";
 		};
-		F6AFDF4FAEF6DA6C536CBC439786B952 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F5920DA34DCFC019943BDC232E7F2E3B /* Pods_AdGemTester.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AC4664B789260191E69EF6327771E438 /* Headers */ = {
+		12AA689C2B09889489A6484AF1981C0B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F24DF739F698188245605BA6495A419 /* Pods-AdGemTester-umbrella.h in Headers */,
+				5ED5046B3ABEC67BDBC4109656C460DD /* Pods-AdGemTester-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,21 +179,21 @@
 /* Begin PBXNativeTarget section */
 		9DB4B62FA1661263626E4548C1B30FB2 /* Pods-AdGemTester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A83826FA68262A6C7534431F55B6A24 /* Build configuration list for PBXNativeTarget "Pods-AdGemTester" */;
+			buildConfigurationList = 6300AEB4393EB8993CD2D41FD84A8137 /* Build configuration list for PBXNativeTarget "Pods-AdGemTester" */;
 			buildPhases = (
-				AC4664B789260191E69EF6327771E438 /* Headers */,
-				11F6103366AFA81DD84E333E6871906C /* Sources */,
-				3B4369411B33FFB14579E4DD6E08601F /* Frameworks */,
-				50295E24857CF24ECF4205C4F9DC1B34 /* Resources */,
+				12AA689C2B09889489A6484AF1981C0B /* Headers */,
+				A8B35B305EB542D20186475F9931DB56 /* Sources */,
+				82067CB28A4D136054F416878AD70DCB /* Frameworks */,
+				67BC124D215D1F1A9B46B72D4FB9B35C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4DD0FFAD6FB5CE377F577F4F854CEE70 /* PBXTargetDependency */,
+				D8CEEEB26B8C44052820C77B6A518B99 /* PBXTargetDependency */,
 			);
 			name = "Pods-AdGemTester";
-			productName = "Pods-AdGemTester";
-			productReference = F5920DA34DCFC019943BDC232E7F2E3B /* Pods_AdGemTester.framework */;
+			productName = Pods_AdGemTester;
+			productReference = F5920DA34DCFC019943BDC232E7F2E3B /* Pods-AdGemTester */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -202,19 +202,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F6AFDF4FAEF6DA6C536CBC439786B952 /* Products */;
+			productRefGroup = 8437B7393E68F06A82BC1111433BB08A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -225,7 +225,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		50295E24857CF24ECF4205C4F9DC1B34 /* Resources */ = {
+		67BC124D215D1F1A9B46B72D4FB9B35C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,27 +255,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11F6103366AFA81DD84E333E6871906C /* Sources */ = {
+		A8B35B305EB542D20186475F9931DB56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6EE78CE07141419F2D4DFE24BCC7EB /* Pods-AdGemTester-dummy.m in Sources */,
+				A9754A63A4D99097FFE0F1E839E09C80 /* Pods-AdGemTester-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4DD0FFAD6FB5CE377F577F4F854CEE70 /* PBXTargetDependency */ = {
+		D8CEEEB26B8C44052820C77B6A518B99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AdGem;
 			target = E2C375A517D86D4941B32DEE22F72439 /* AdGem */;
-			targetProxy = 4153F1C62C75EB6C5FF3FC55F329A5ED /* PBXContainerItemProxy */;
+			targetProxy = E1D402D5D1B9A46D11CEE74644F6100B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		271DD9A50F19D6A4EDCEBBB3B3EDA34D /* Debug */ = {
+		19F11E0C66E98D38EE4634C35561848F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD7A96802AA01E6090E08A789356EC2 /* AdGem.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		405CBA97A39D1398312FDEA612C21FC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3456A56C989B4F330DA1A43276ADC4AD /* Pods-AdGemTester.debug.xcconfig */;
 			buildSettings = {
@@ -312,25 +329,7 @@
 			};
 			name = Debug;
 		};
-		3608385180552A430BE56E90C6A2E7F4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C2995D688432011D76B5D4F1AFC8E90 /* AdGem.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		58C3C8F7491DAE71BCF921F7889F9141 /* Release */ = {
+		77D384A85B6322295303CDF0D86FAAD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1F5DA7BE273086A958CA1D01B503B59 /* Pods-AdGemTester.release.xcconfig */;
 			buildSettings = {
@@ -430,22 +429,23 @@
 			};
 			name = Release;
 		};
-		B69082A3BE96311CF10B57CA2744FE8D /* Debug */ = {
+		CC64E00DA2482FE7267B5CB1C1530399 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD7A96802AA01E6090E08A789356EC2 /* AdGem.debug.xcconfig */;
+			baseConfigurationReference = 0C2995D688432011D76B5D4F1AFC8E90 /* AdGem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -525,20 +525,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		740E8F1F9D167EFF9A1C69FC5B3BB41B /* Build configuration list for PBXAggregateTarget "AdGem" */ = {
+		6300AEB4393EB8993CD2D41FD84A8137 /* Build configuration list for PBXNativeTarget "Pods-AdGemTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B69082A3BE96311CF10B57CA2744FE8D /* Debug */,
-				3608385180552A430BE56E90C6A2E7F4 /* Release */,
+				405CBA97A39D1398312FDEA612C21FC1 /* Debug */,
+				77D384A85B6322295303CDF0D86FAAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A83826FA68262A6C7534431F55B6A24 /* Build configuration list for PBXNativeTarget "Pods-AdGemTester" */ = {
+		740E8F1F9D167EFF9A1C69FC5B3BB41B /* Build configuration list for PBXAggregateTarget "AdGem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				271DD9A50F19D6A4EDCEBBB3B3EDA34D /* Debug */,
-				58C3C8F7491DAE71BCF921F7889F9141 /* Release */,
+				19F11E0C66E98D38EE4634C35561848F /* Debug */,
+				CC64E00DA2482FE7267B5CB1C1530399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
