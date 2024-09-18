@@ -111,7 +111,7 @@ The sample apps demonstrate how to integrate and use the AdGem SDK. Here's a bas
 
 ## Requirements
 
-- iOS 11.0+
+- iOS 12.0+
 - Xcode 12.0+
 - Swift 5.0+ (for Swift project)
 
