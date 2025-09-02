@@ -18,7 +18,7 @@ jobs:
         run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install cocoapods
         run: gem install cocoapods
