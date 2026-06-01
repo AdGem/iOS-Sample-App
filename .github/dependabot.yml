@@ -14,8 +14,8 @@ updates:
       interval: "monthly"
     rebase-strategy: disabled
     commit-message:
-      prefix: "build(actions-deps)"
-      prefix-development: "build(actions-deps-dev)"
+      prefix: "deps(actions-deps)"
+      prefix-development: "deps(actions-deps-dev)"
     reviewers:
       - "@AdGem/devops"
       - "@AdGem/sdk-developers"
