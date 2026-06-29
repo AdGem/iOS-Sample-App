@@ -20,18 +20,21 @@ This repository contains two sample applications:
 
 ## Setup Instructions
 
+Both sample apps consume the AdGem SDK via Swift Package Manager. Xcode resolves
+the package automatically on open — there is no separate install step.
+
 ### Objective-C
 
 1. Navigate to the `Obj-C` directory
-2. Open `AdGem-ObjC.xcworkspace` in Xcode
-3. Run `pod install` to install dependencies
+2. Open `AdGem-ObjC.xcodeproj` in Xcode
+3. Wait for Xcode to resolve the Swift package dependencies
 4. Build and run the project
 
 ### Swift
 
 1. Navigate to the `Swift` directory
-2. Open `AdGemTester.xcworkspace` in Xcode
-3. Run `pod install` to install dependencies
+2. Open `AdGemTester.xcodeproj` in Xcode
+3. Wait for Xcode to resolve the Swift package dependencies
 4. Build and run the project
 
 ## Basic Usage
@@ -111,14 +114,17 @@ The sample apps demonstrate how to integrate and use the AdGem SDK. Here's a bas
 
 ## Requirements
 
-- iOS 12.0+
-- Xcode 12.0+
+- iOS 15.0+
+- Xcode 14.0+
 - Swift 5.0+ (for Swift project)
 
 ## Dependencies
 
-The project uses CocoaPods for dependency management. The main dependency is:
+The project uses Swift Package Manager for dependency management. The main dependency is:
 
-- **AdGem SDK**
+- **AdGem SDK** — [`github.com/AdGem/ios-sdk-package`](https://github.com/AdGem/ios-sdk-package)
 
-To install dependencies, run `pod install` in the respective project directories.
+As a dogfooding demo app, both projects track the SDK package's `main` branch so
+they always build against the latest AdGem SDK. Xcode resolves the package
+automatically when you open either project; `Package.resolved` is intentionally
+not committed so each build picks up the newest release.
