@@ -9,47 +9,55 @@
 import UIKit
 import AdGemSdk
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, AdGemDelegate {
-  
-  var window: UIWindow?
-  
-  internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    AdGem.delegate = self
-    
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy/MM/dd HH:mm"
-    let someDateTime = formatter.date(from: "2016/10/08 22:31")
+extension Notification.Name {
+  /// Posted whenever the stored coin balance changes so any visible screen can refresh.
+  static let adGemCoinsUpdated = Notification.Name("AdGemCoinsUpdated")
+}
 
-    let id: String = {
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate, AdGemDelegate {
+
+  var window: UIWindow?
+
+  internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // 1. Set the delegate and initialize the SDK as early as possible.
+    //    initialize() does not hit the network.
+    AdGem.delegate = self
+    AdGem.initialize(configuration: AdGemConfiguration(appId: "1"))
+
+    // Persist a stable player id across launches.
+    let playerId: String = {
       if let storedId = UserDefaults.standard.string(forKey: "AdGem-UserId") {
           return storedId
-      } else {
-          let newId = UUID().uuidString
-          UserDefaults.standard.set(newId, forKey: "AdGem-UserId")
-          return newId
       }
+      let newId = UUID().uuidString
+      UserDefaults.standard.set(newId, forKey: "AdGem-UserId")
+      return newId
     }()
 
-    let metaData = AdGemPlayerMetadata.Builder
-      .initWithPlayerId(playerId: id)
-      .playerAge(age: 20)
-      .playerGender(gender: .male)
-      .playerLevel(level: 5)
-      .playerPlacement(place: 1000)
-      .playerPayer(spentMoney: true)
-      .playerIAPTotal(iapTotal: 10.0)
-      .playerCreatedAt(creationDate: someDateTime!)
-      .customField1(field: "custom_field_1")
-      .customField2(field: "custom_field_2")
-      .customField3(field: "custom_field_3")
-      .customField4(field: "custom_field_4")
-      .customField5(field: "custom_field_5")
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd HH:mm"
+    let createdAt = formatter.date(from: "2016/10/08 22:31") ?? Date()
+
+    // 2. Once the player's identity is known, build the metadata and set the
+    //    player. This starts the session and makes the offerwall available.
+    let metaData = AdGemPlayerMetadata.Builder(playerId: playerId)
+      .age(20)
+      .gender(.male)
+      .level(5)
+      .placement(1000)
+      .isPayer(true)
+      .iapTotalUsd(10.0)
+      .createdAt(createdAt)
+      .customField1("custom_field_1")
+      .customField2("custom_field_2")
+      .customField3("custom_field_3")
+      .customField4("custom_field_4")
+      .customField5("custom_field_5")
       .build()
 
-    AdGem.setPlayerMetaData(metaData: metaData)
-      
+    AdGem.setPlayer(metaData)
+
     return true
   }
   
@@ -60,9 +68,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdGemDelegate {
   func offerwallRewardReceived(amount: Int) {
     print("AdGem Reward User from offerwall.")
     let coins = UserDefaults.standard.integer(forKey: "coins")
-    
     UserDefaults.standard.set(coins + amount, forKey: "coins")
-    UserDefaults.standard.synchronize()
+    // The reward can arrive after the offerwall has closed and the screen has
+    // already appeared, so tell any visible screen to refresh its balance.
+    NotificationCenter.default.post(name: .adGemCoinsUpdated, object: nil)
   }
   
   func offerwallLoadingStarted() {
