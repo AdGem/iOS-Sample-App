@@ -15,9 +15,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
 
+/// Token for the coin-update observer, removed on dealloc.
+@property (strong, nonatomic) id coinsObserver;
+
 @end
 
 @implementation ViewController
+
+- (void)dealloc {
+    if (_coinsObserver != nil) {
+        [[NSNotificationCenter defaultCenter] removeObserver:_coinsObserver];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,10 +37,10 @@
     // is already visible (the reward callback can land after viewDidAppear has
     // already run).
     __weak typeof(self) weakSelf = self;
-    [[NSNotificationCenter defaultCenter] addObserverForName:AdGemCoinsUpdatedNotification
-                                                      object:nil
-                                                       queue:[NSOperationQueue mainQueue]
-                                                  usingBlock:^(NSNotification * _Nonnull note) {
+    self.coinsObserver = [[NSNotificationCenter defaultCenter] addObserverForName:AdGemCoinsUpdatedNotification
+                                                                          object:nil
+                                                                           queue:[NSOperationQueue mainQueue]
+                                                                      usingBlock:^(NSNotification * _Nonnull note) {
         [weakSelf refreshRewardLabel];
     }];
 }
