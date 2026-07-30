@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/// Posted whenever the stored coin balance changes so any visible screen can refresh.
+extern NSString * const AdGemCoinsUpdatedNotification;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

@@ -383,8 +383,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AdGem/ios-sdk-package";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = "3.0.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -7,12 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 @import AdGemSdk;
 
 @interface ViewController ()
-
-@property (weak, nonatomic) IBOutlet UIButton *standardVideoButton;
-@property (weak, nonatomic) IBOutlet UIButton *rewardedVideoButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rewardLabel;
@@ -26,21 +24,26 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.versionLabel.text = [NSString stringWithFormat:@"iOS - V%@", AdGem.sdkVersion];
 
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(videosReady) name:@"VideosReady" object:nil];
+    // Refresh the balance whenever a reward is granted, even while this screen
+    // is already visible (the reward callback can land after viewDidAppear has
+    // already run).
+    __weak typeof(self) weakSelf = self;
+    [[NSNotificationCenter defaultCenter] addObserverForName:AdGemCoinsUpdatedNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification * _Nonnull note) {
+        [weakSelf refreshRewardLabel];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    int coins = (int)[NSUserDefaults.standardUserDefaults integerForKey:@"coins"];
-    self.rewardLabel.text = [NSString stringWithFormat:@"%i coins", coins];
+    [self refreshRewardLabel];
 }
 
-- (void)videosReady {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.standardVideoButton.hidden = NO;
-        self.rewardedVideoButton.hidden = NO;
-    });
+- (void)refreshRewardLabel {
+    NSInteger coins = [NSUserDefaults.standardUserDefaults integerForKey:@"coins"];
+    self.rewardLabel.text = [NSString stringWithFormat:@"%ld coins", (long)coins];
 }
 
 - (IBAction)showOfferwallTapped:(id)sender {

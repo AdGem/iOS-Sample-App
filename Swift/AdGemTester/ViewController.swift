@@ -11,9 +11,6 @@ import AdGemSdk
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var standardVideoButton: UIButton!
-    @IBOutlet weak var rewardedVideoButton: UIButton!
-
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var rewardLabel: UILabel!
 
@@ -22,10 +19,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.versionLabel.text = "iOS - V\(AdGem.sdkVersion)"
+
+        // Refresh the balance whenever a reward is granted, even while this
+        // screen is already visible (the reward callback can land after
+        // viewDidAppear has already run).
+        NotificationCenter.default.addObserver(
+            forName: .adGemCoinsUpdated,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            self?.refreshRewardLabel()
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        refreshRewardLabel()
+    }
+
+    private func refreshRewardLabel() {
         let coins = UserDefaults.standard.integer(forKey: "coins")
         self.rewardLabel.text = "\(coins) coins"
     }
@@ -37,13 +49,6 @@ class ViewController: UIViewController {
 
     @IBAction func showOfferwallTapped(_ sender: Any) {
         AdGem.showOfferwall()
-    }
-
-    @objc func videosReady() {
-        DispatchQueue.main.async {
-            self.standardVideoButton.isHidden = false
-            self.rewardedVideoButton.isHidden = false
-        }
     }
 }
 
