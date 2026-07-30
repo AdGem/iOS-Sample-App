@@ -14,6 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var rewardLabel: UILabel!
 
+    /// Token for the coin-update observer, removed on deinit.
+    private var coinsObserver: NSObjectProtocol?
+
+    deinit {
+        if let coinsObserver = coinsObserver {
+            NotificationCenter.default.removeObserver(coinsObserver)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +31,7 @@ class ViewController: UIViewController {
         // Refresh the balance whenever a reward is granted, even while this
         // screen is already visible (the reward callback can land after
         // viewDidAppear has already run).
-        NotificationCenter.default.addObserver(
+        coinsObserver = NotificationCenter.default.addObserver(
             forName: .adGemCoinsUpdated,
             object: nil,
             queue: .main
